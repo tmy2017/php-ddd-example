@@ -7,7 +7,14 @@ tasks:
       docker-compose pull
       sudo chmod o+rwx . 
       sudo chmod -R o+rw *
-    command: docker-compose up 
+    # since gitpod host machine ip is changing and no host.docker.internal yet, thus must dynamic insert zz-_48-_y21-1203-1943
+    command: |
+      echo "xdebug.client_host=`hostname -i`" >> xdebug-tmy.ini 
+      echo "xdebug.mode=debug" >> xdebug-tmy.ini 
+      echo "xdebug.start_with_request=yes" >> xdebug-tmy.ini 
+      echo "xdebug.client_port=9001" >> xdebug-tmy.ini 
+      echo "xdebug.log=/app/xdebug-log-from-container" >> xdebug-tmy.ini       
+      docker-compose up 
 # split right so normal terminal can be seen  zz-_44-_y21-1107-0714
     openMode: split-right
 # direct open preview   
