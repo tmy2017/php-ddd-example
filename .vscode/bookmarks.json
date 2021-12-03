@@ -9,6 +9,16 @@
 					"label": ""
 				}
 			]
+		},
+		{
+			"path": "docker-compose.yml",
+			"bookmarks": [
+				{
+					"line": 64,
+					"column": 12,
+					"label": ""
+				}
+			]
 		}
 	]
 }

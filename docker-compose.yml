@@ -62,7 +62,7 @@ services:
       - "9040:9001"
     volumes:
       - .:/app:delegated
-        ./xdebug-tmy.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ./xdebug-tmy.ini:/usr/local/etc/php/conf.d/xdebug.ini
     depends_on:
       - shared_rabbitmq
       - shared_prometheus
