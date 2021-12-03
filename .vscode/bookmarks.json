@@ -14,7 +14,12 @@
 			"path": "docker-compose.yml",
 			"bookmarks": [
 				{
-					"line": 64,
+					"line": 54,
+					"column": 49,
+					"label": ""
+				},
+				{
+					"line": 66,
 					"column": 12,
 					"label": ""
 				}
