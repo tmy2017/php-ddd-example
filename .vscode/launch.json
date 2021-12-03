@@ -9,7 +9,6 @@
             "type": "php",
             "request": "launch",
             "port": 9001,
-            "hostname": "192.168.12.164",
             "pathMappings": {"/app": "${workspaceRoot}"},
             "log": true
         },
