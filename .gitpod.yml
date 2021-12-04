@@ -7,7 +7,7 @@ tasks:
       sudo docker pull registry.jetbrains.team/p/prj/containers/projector-phpstorm
     command: |
       sudo mkdir -p .jetbrains; sudo touch .jetbrains/.gitkeep; sudo chown -R 1000:1000 .jetbrains
-      sudo docker run --rm -p 8887:8887 -v /workspace/template-jetbrains-phpstorm/.jetbrains:/home/projector-user -it registry.jetbrains.team/p/prj/containers/projector-phpstorm
+      sudo docker run --rm -p 8887:8887 -v /workspace/php-ddd-example/.jetbrains:/home/projector-user /workspace/:/ -it registry.jetbrains.team/p/prj/containers/projector-phpstorm
 # just this directory is different from wildcard zzgosh  zz-_44-_y21-1106-1822
 # seems make build will start dc up, which prebuild will just hang, now try only do dc build zz-_44-_y21-1106-1846
   - init: | 
