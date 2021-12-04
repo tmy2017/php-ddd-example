@@ -80,6 +80,7 @@ services:
     ports:
       - "8041:8041"
       - "9041:9001"
+    extra_hosts : [ host.docker.internal:host-gateway]
     volumes:
       - .:/app:delegated
     depends_on:
@@ -100,6 +101,7 @@ services:
     ports:
       - "8030:8030"
       - "9030:9001"
+    extra_hosts : [ host.docker.internal:host-gateway]
     volumes:
       - .:/app:delegated
     depends_on:
