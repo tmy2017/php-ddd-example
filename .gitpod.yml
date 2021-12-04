@@ -11,8 +11,10 @@ tasks:
       sudo chmod o+rwx . 
       sudo chmod -R o+rw *
     # since gitpod host machine ip is changing and no host.docker.internal yet, thus must dynamic insert zz-_48-_y21-1203-1943
+    # also zend_extension = xdebug.so is a must! zz-_48-_y21-1204-0936
     command: |
       rm xdebug-tmy.ini
+      echo "zend_extension = xdebug.so" >> xdebug-tmy.ini
       echo "xdebug.client_host=`hostname -i`" >> xdebug-tmy.ini 
       echo "xdebug.mode=debug" >> xdebug-tmy.ini 
       echo "xdebug.start_with_request=yes" >> xdebug-tmy.ini 
