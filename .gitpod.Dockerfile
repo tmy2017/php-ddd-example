@@ -7,10 +7,13 @@ RUN sudo apt-get -qq update
 RUN sudo apt-get -qq install -y patchutils python3 python3-pip libxext6 libxrender1 libxtst6 libfreetype6 libxi6 telnet netcat
 # Install Projector
 RUN pip3 install projector-installer
+
+# strange syntax - main command projector must first accept GPL license or it would get stuck in docker build
+#   then the sub command ide autoinstall 
 # Install PhpStorm 
-# as of (9-Dec-2021T10-37+0100) `projector find` informs 2021.2 is tested version
-# more info on command - https://github.com/JetBrains/projector-installer/blob/master/COMMANDS.md#ide-commands
-RUN projector ide autoinstall --config-name PhpStormByIdeAutoinstall-2021.2 --ide-name "PhpStorm 2021.2" --port 19999
+#   as of (9-Dec-2021T10-37+0100) `projector find` informs 2021.2 is tested version
+#   more info on command - https://github.com/JetBrains/projector-installer/blob/master/COMMANDS.md#ide-commands
+RUN projector --accept-license ide autoinstall --config-name PhpStormByIdeAutoinstall-2021.2 --ide-name "PhpStorm 2021.2" --port 19999
 
 # Install ddev
 RUN brew install drud/ddev/ddev
