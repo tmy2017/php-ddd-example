@@ -1,11 +1,11 @@
 # from https://github.com/gitpod-io/gitpod/pull/6409 for host.gateway.internal zz-_48-_y21-1203-2144
 experimentalNetwork: true
 
-image: tmy2017/gitpod-pm
+# image: tmy2017/gitpod-pm
 
 tasks:
-  - name: start phpstorm as default 
-    command: projector run PhpStormByIdeAutoinstall-2021.2
+  # - name: start phpstorm as default 
+  #   command: projector run PhpStormByIdeAutoinstall-2021.2
 # just this directory is different from wildcard zzgosh  zz-_44-_y21-1106-1822
 # seems make build will start dc up, which prebuild will just hang, now try only do dc build zz-_44-_y21-1106-1846
   - init: | 
