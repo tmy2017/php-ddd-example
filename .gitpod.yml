@@ -22,6 +22,8 @@ tasks:
     openMode: split-right
 # direct open preview   
 ports:
+  - port: 19999
+    onOpen: open-browser
   - port: 8041
     visibility: private
     onOpen: open-preview
