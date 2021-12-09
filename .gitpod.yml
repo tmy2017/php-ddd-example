@@ -1,6 +1,9 @@
 # from https://github.com/gitpod-io/gitpod/pull/6409 for host.gateway.internal zz-_48-_y21-1203-2144
 experimentalNetwork: true
 
+image: 
+  file: .gitpod.Dockerfile
+
 tasks:
   - name: projector for phpstorm in browser
     init: |
