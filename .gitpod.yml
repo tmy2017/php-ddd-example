@@ -1,8 +1,12 @@
 # from https://github.com/gitpod-io/gitpod/pull/6409 for host.gateway.internal zz-_48-_y21-1203-2144
 experimentalNetwork: true
 
-# try to specify the newst image, to rule out gitpod caching image locally
-image: tmy2017/gitpod-pm:beta
+# use docker image to persist phpstorm ide settings across new workspace or reboot 
+#   Simply use `tmy-persist-ide-settings-through-image-for-gitpod` (should be in image already), then get the 
+#   latest tag name, update below
+#   NOTE: in theory should not need the tag name, but seems gitpod is caching image locally, hence to use 
+#   tag name to ensure latest image is pulled
+image: tmy2017/gitpod-pm:ver-1639257833
 
 tasks:
   - name: start phpstorm as default 
