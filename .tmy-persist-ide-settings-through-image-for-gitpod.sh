@@ -16,3 +16,4 @@ docker tag tmy2017/gitpod-pm tmy2017/gitpod-pm:ver-${EPOCH_TIME}
 docker login
 docker push tmy2017/gitpod-pm:ver-${EPOCH_TIME}
 echo "success - the newest image name with tag is: tmy2017/gitpod-pm:ver-${EPOCH_TIME}"
+echo "please remember to update .gitpod.yml image name to ensure it has latest image"
