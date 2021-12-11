@@ -6,7 +6,9 @@ image: tmy2017/gitpod-pm:beta
 
 tasks:
   - name: start phpstorm as default 
-    command: projector run PhpStormByIdeAutoinstall-2021.2
+# use projector run.sh to directly invoke project directory. Thanks to 
+#   https://github.com/shaal/DrupalPod/blob/main/.gitpod/utils/phpstorm.template.sh
+    command: ~/.projector/configs/PhpStormByIdeAutoinstall-2021.2/run.sh $GITPOD_REPO_ROOT 
 # just this directory is different from wildcard zzgosh  zz-_44-_y21-1106-1822
 # seems make build will start dc up, which prebuild will just hang, now try only do dc build zz-_44-_y21-1106-1846
   - init: | 
@@ -15,8 +17,8 @@ tasks:
       docker-compose pull
       sudo chmod o+rwx . 
       sudo chmod -R o+rw *
-    # since gitpod host machine ip is changing and no host.docker.internal yet, thus must dynamic insert zz-_48-_y21-1203-1943
-    # also zend_extension = xdebug.so is a must! zz-_48-_y21-1204-0936
+# since gitpod host machine ip is changing and no host.docker.internal yet, thus must dynamic insert zz-_48-_y21-1203-1943
+# also zend_extension = xdebug.so is a must! zz-_48-_y21-1204-0936
     command: |
       docker-compose up 
 # split right so normal terminal can be seen  zz-_44-_y21-1107-0714
@@ -28,8 +30,8 @@ ports:
     onOpen: open-browser
   - port: 1000-9000
     onOpen: ignore
-  # still applied even above implicitly says ignore! 
-  # NOTE: can not have more than two using onOpen: open-preview
+# still applied even above implicitly says ignore! 
+# NOTE: can not have more than two using onOpen: open-preview
   - port: 8041
     visibility: private
     onOpen: open-preview
@@ -45,3 +47,4 @@ vscode:
     - humao.rest-client
     - pkief.material-icon-theme
     - alefragnani.bookmarks
+    - ms-vscode.live-server
