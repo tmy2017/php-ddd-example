@@ -1,7 +1,8 @@
 # from https://github.com/gitpod-io/gitpod/pull/6409 for host.gateway.internal zz-_48-_y21-1203-2144
 experimentalNetwork: true
 
-image: tmy2017/gitpod-pm
+# try to specify the newst image, to rule out gitpod caching image locally
+image: tmy2017/gitpod-pm:beta
 
 tasks:
   - name: symlink .config .local to persist jetbrains at least after workspace restart
