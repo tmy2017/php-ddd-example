@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="note-storage">
+    <option name="notes">
+      <list>
+        <NoteState>
+          <option name="errors">
+            <set />
+          </option>
+          <option name="id" value="9bd7bec5-4920-4c86-a8e6-69c85c50828d" />
+          <option name="nodeRange">
+            <NodeRangeState>
+              <option name="left">
+                <list>
+                  <option value="PsiElement(Non Lazy Group statement)" />
+                  <option value="PhpNamespaceImpl: Persistence" />
+                  <option value="PsiElement(Non Lazy Group statement)" />
+                  <option value="PhpClass: ElasticsearchBackofficeCourseRepository" />
+                  <option value="MethodImpl: save" />
+                  <option value="PsiElement(Group statement)" />
+                  <option value="PsiWhiteSpace" />
+                </list>
+              </option>
+              <option name="right">
+                <list>
+                  <option value="PsiElement(Non Lazy Group statement)" />
+                  <option value="PhpNamespaceImpl: Persistence" />
+                  <option value="PsiElement(Non Lazy Group statement)" />
+                  <option value="PhpClass: ElasticsearchBackofficeCourseRepository" />
+                  <option value="MethodImpl: save" />
+                  <option value="PsiElement(Group statement)" />
+                  <option value="PsiWhiteSpace" />
+                </list>
+              </option>
+            </NodeRangeState>
+          </option>
+          <option name="text" value="aloha yoyo" />
+          <option name="textRange">
+            <TextRangeState>
+              <option name="hash" value="51BE9347886AF0D8C07411E439BA44C0" />
+              <option name="left" value="583" />
+              <option name="right" value="647" />
+            </TextRangeState>
+          </option>
+          <option name="time" value="1639260802968" />
+          <option name="type" value="INFO" />
+          <option name="url" value="file://$PROJECT_DIR$/src/Backoffice/Courses/Infrastructure/Persistence/ElasticsearchBackofficeCourseRepository.php" />
+          <option name="user">
+            <UserState>
+              <option name="name" value="Tmy2017" />
+            </UserState>
+          </option>
+        </NoteState>
+      </list>
+    </option>
+  </component>
+</project>
