@@ -5,13 +5,6 @@ experimentalNetwork: true
 image: tmy2017/gitpod-pm:beta
 
 tasks:
-  - name: symlink .config .local to persist jetbrains at least after workspace restart
-    # can just do in prebuid phase, not command phase needed 
-    init: |
-      cd ~/.local/share/
-      ln -s /workspace/php-ddd-example/.gitpod-home-dir-ide-needed-folders/.local/share/JetBrains/ JetBrains
-      cd ~/.config/
-      ln -s /workspace/php-ddd-example/.gitpod-home-dir-ide-needed-folders/.config/JetBrains/ JetBrains
   - name: start phpstorm as default 
     command: projector run PhpStormByIdeAutoinstall-2021.2
 # just this directory is different from wildcard zzgosh  zz-_44-_y21-1106-1822
