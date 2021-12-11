@@ -1,5 +1,6 @@
 #!/bin/sh
 EPOCH_TIME=`date +%s`
+docker pull tmy2017/gitpod-pm
 docker run --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm /bin/sh -c "mkdir -p .local/share/JetBrains"
 # NOTE: docker cp has no glob pattern! https://github.com/moby/moby/issues/7710
 # NOTICE: copy files and directories inherently looks different - directories is whole folder
