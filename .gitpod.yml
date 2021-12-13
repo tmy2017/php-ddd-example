@@ -6,7 +6,7 @@ experimentalNetwork: true
 #   latest tag name, update below
 #   NOTE: in theory should not need the tag name, but seems gitpod is caching image locally, hence to use 
 #   tag name to ensure latest image is pulled
-image: tmy2017/gitpod-pm:ver-1639312302
+image: tmy2017/gitpod-pm:ver-1639387636
 
 tasks:
   - name: start phpstorm as default 
