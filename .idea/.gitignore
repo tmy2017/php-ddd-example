@@ -1,6 +1,7 @@
 # Default ignored files
 /shelf/
-/workspace.xml
+# simple workaround for gitpod to make debug port to be persisted - normal situation should NOT comment out this 
+#/workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
