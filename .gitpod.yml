@@ -9,23 +9,19 @@ experimentalNetwork: true
 image: tmy2017/gitpod-pm:ver-1639395143 
 
 tasks:
-  - name: start phpstorm as default 
-# use projector run.sh to directly invoke project directory. Thanks to 
-#   https://github.com/shaal/DrupalPod/blob/main/.gitpod/utils/phpstorm.template.sh
-    command: ~/.projector/configs/PhpStormByIdeAutoinstall-2021.2/run.sh $GITPOD_REPO_ROOT 
-# just this directory is different from wildcard zzgosh  zz-_44-_y21-1106-1822
-# seems make build will start dc up, which prebuild will just hang, now try only do dc build zz-_44-_y21-1106-1846
+  # use projector run.sh to directly invoke project directory. Thanks to 
+  #   https://github.com/shaal/DrupalPod/blob/main/.gitpod/utils/phpstorm.template.sh
+  - command: tmy-pstorm-launch-GITPOD_REPO_ROOT
+  # NOTE: below `sudo chmod o+rwx .` - this dot specific "here" directory is different from wildcard in line below!
   - init: | 
       make deps
       docker-compose build
       docker-compose pull
       sudo chmod o+rwx . 
       sudo chmod -R o+rw *
-# since gitpod host machine ip is changing and no host.docker.internal yet, thus must dynamic insert zz-_48-_y21-1203-1943
-# also zend_extension = xdebug.so is a must! zz-_48-_y21-1204-0936
     command: |
       docker-compose up 
-# split right so normal terminal can be seen  zz-_44-_y21-1107-0714
+# split right so normal terminal can be seen 
     openMode: split-right
 # direct open preview   
 ports:
