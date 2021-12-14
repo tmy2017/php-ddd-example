@@ -9,8 +9,14 @@ experimentalNetwork: true
 image: tmy2017/gitpod-pm:ver-1639395143 
 
 tasks:
+  # USAGE NOTE on PHPSTORMS in gitpod: 
+  #   Using docker image to persist IDE settings has imitation of 
+  #   !!! MIGHT need to git check in workspace.xml (ex: for xdebug ide listening port) due to some settings 
+  #     are not able to "share through VCS". Similar issue: https://youtrack.jetbrains.com/issue/WI-57046
+  #     although it is not recommended by official guideline: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839-How-to-manage-projects-under-Version-Control-Systems
   # use projector run.sh to directly invoke project directory. Thanks to 
   #   https://github.com/shaal/DrupalPod/blob/main/.gitpod/utils/phpstorm.template.sh
+  #   now uses custom global command to make config cleaner here
   - command: tmy-pstorm-launch-GITPOD_REPO_ROOT
   # NOTE: below `sudo chmod o+rwx .` - this dot specific "here" directory is different from wildcard in line below!
   - init: | 
