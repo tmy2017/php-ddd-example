@@ -1,3 +1,4 @@
+echo "!!!MUST have .tmy-xyz files in current directory, if not then this command is not useful!!!"
 EPOCH_TIME=`date +%s`
 # get latest (there is a gotcha! see below) image
 #   NOTE: latest tag is dangerous, can easily overwrite local latest! https://github.com/moby/moby/issues/10291
@@ -6,6 +7,10 @@ docker pull tmy2017/gitpod-pm
 docker run -d -it --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm bash
 docker cp .tmy-persist-ide-settings-through-image-for-gitpod.sh  temp-for-image-commit-${EPOCH_TIME}:/usr/local/bin/tmy-persist-ide-settings-through-image-for-gitpod
 docker cp .tmy-persist-custom-commands-through-image.sh  temp-for-image-commit-${EPOCH_TIME}:/usr/local/bin/tmy-persist-custom-commands-through-image
+# also update the pstorm launch command for disabling ORG_JETBRAINS_PROJECTOR_SERVER_AUTO_KEYMAP
+#   see https://youtrack.jetbrains.com/issue/PRJ-121#focus=Comments-27-5198388.0-0 and
+#   https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/server_customization/#list-of-parameters  
+docker cp .tmy-pstorm-launch-GITPOD_REPO_ROOT.sh ${EPOCH_TIME}:/usr/local/bin/tmy-pstorm-launch-GITPOD_REPO_ROOT
 docker commit temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm
 docker tag tmy2017/gitpod-pm tmy2017/gitpod-pm:ver-${EPOCH_TIME}
 docker push tmy2017/gitpod-pm:ver-${EPOCH_TIME}
