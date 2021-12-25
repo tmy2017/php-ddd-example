@@ -1,3 +1,4 @@
+# below credit goes to https://github.com/shaal/DrupalPod/blob/main/.gitpod/images/Dockerfile#L29  
 FROM gitpod/workspace-full
 SHELL ["/bin/bash", "-c"]
 # ENV HOMEBREW_INSTALL_FROM_API=true
