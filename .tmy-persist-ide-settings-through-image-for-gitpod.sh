@@ -3,7 +3,13 @@ EPOCH_TIME=`date +%s`
 # get latest (there is a gotcha! see below) image
 #   NOTE: latest tag is dangerous, can easily overwrite local latest! https://github.com/moby/moby/issues/10291
 docker pull tmy2017/gitpod-pm
-docker run --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm /bin/sh -c "mkdir -p .local/share/JetBrains"
+
+# keep container running for updating files, then later commit 
+#   NOTE: even in detach mode -it is MUST for shell
+docker run -d -it --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm bash
+
+# prepare folders in case it does not exist
+docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "mkdir -p .local/share/JetBrains"
 
 # NOTE: docker cp has no glob pattern! https://github.com/moby/moby/issues/7710
 # NOTICE: copy files and directories inherently looks different - directories is whole folder
@@ -24,9 +30,10 @@ docker cp /home/gitpod/.local/share/JetBrains/ temp-for-image-commit-${EPOCH_TIM
 
 # delete license related info in .config folder
 #   use -f to skip error
-docker run --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm /bin/sh -c "rm -f /home/gitpod/.config/JetBrains/PhpStorm2021.2/phpstorm.key"
+docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "rm -f /home/gitpod/.config/JetBrains/PhpStorm2021.2/phpstorm.key"
+docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "rm -f /home/gitpod/.config/JetBrains/PhpStorm2021.2/plugin_PCWMP.license"
 # remove past trial license left .java/.userPrefs data - if any
-docker run --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm /bin/sh -c "rm -rf /home/gitpod/.java/.userPrefs/jetbrains/"
+docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "rm -rf /home/gitpod/.java/.userPrefs/jetbrains/"
 
 ### License related - END
 
