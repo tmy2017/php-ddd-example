@@ -25,6 +25,8 @@ docker cp /home/gitpod/.local/share/JetBrains/ temp-for-image-commit-${EPOCH_TIM
 # delete license related info in .config folder
 #   use -f to skip error
 docker run --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm /bin/sh -c "rm -f /home/gitpod/.config/JetBrains/PhpStorm2021.2/phpstorm.key"
+# remove past trial license left .java/.userPrefs data - if any
+docker run --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm /bin/sh -c "rm -rf /home/gitpod/.java/.userPrefs/jetbrains/"
 
 ### License related - END
 
