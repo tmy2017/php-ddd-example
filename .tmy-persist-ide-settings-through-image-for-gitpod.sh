@@ -31,19 +31,17 @@ docker run --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm /bin/sh 
 ### License related - END
 
 ### Push to repo -START
-# Use specific tag so to avoid gitpod caching docker registry image
 docker login
-docker tag tmy2017/gitpod-pm tmy2017/gitpod-pm:ver-${EPOCH_TIME}
-docker push tmy2017/gitpod-pm:ver-${EPOCH_TIME}
 
-# Remember to update the latest! 
-
-# so that next time when docker pull latest really meaning latest
+# Remember to update the latest! so that next time when docker pull latest really meaning latest
 #   TODO: but better have a "moving-tag" instead of default "latest", since it is dangerous and confusing...
 #   https://vsupalov.com/docker-latest-tag/, https://www.cloudsavvyit.com/10691/understanding-dockers-latest-tag/
 docker commit temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm
 docker push tmy2017/gitpod-pm:latest
 
+# Use specific tag so to avoid gitpod caching docker registry image
+docker tag tmy2017/gitpod-pm tmy2017/gitpod-pm:ver-${EPOCH_TIME}
+docker push tmy2017/gitpod-pm:ver-${EPOCH_TIME}
 ### Push to repo - END
 
 echo "success - the newest image name with tag is: tmy2017/gitpod-pm:ver-${EPOCH_TIME}"
