@@ -13,30 +13,23 @@ USER root
 #   Ref: https://github.com/tmy2017/php-ddd-example/blob/main/.gitpod.gitpod-pstorm-with-php71-mysql8.Dockerfile#L5
 # RUN rm -rf /var/run/mysqld/mysqld.pid
 
+# must install php-dev so xdebug can install successfully below
+# XDebug version is chosen by the Ubuntu Package Maintainer - ex: for php7.1 below is still XDebug 2
 RUN add-apt-repository ppa:ondrej/php && \
-    install-packages php7.1 php7.1-mysql php7.1-intl php7.1-mbstring php7.1-curl && \
+    install-packages php7.1 php7.1-xdebug php7.1-mysql php7.1-intl php7.1-mbstring php7.1-curl && \
     update-alternatives --set php /usr/bin/php7.1
 
-### START: XDebug v2
+### START: XDebug 
 # thanks to https://github.com/apolopena/Gitpod-PHP-Debug/blob/master/.gitpod.Dockerfile
 
 RUN touch /var/log/xdebug.log \
     && chmod 666 /var/log/xdebug.log
 
-# NOTE: 
-#   1) not using XDebug v3 to avoid surprise when loading old codebases
-#   2) Below is php version dependent (php.ini file path), so remember to change below if using another php version 
-RUN wget http://xdebug.org/files/xdebug-2.9.1.tgz \
-    && tar -xvzf xdebug-2.9.1.tgz \
-    && cd xdebug-2.9.1 \
-    && phpize \
-    && ./configure \
-    && make \
-    && sudo cp modules/xdebug.so /usr/lib/php/20190902 \
-    && sudo bash -c "echo -e '\nzend_extension = /usr/lib/php/20190902/xdebug.so\n[XDebug]\nxdebug.remote_host = 127.0.0.1\nxdebug.remote_port = 9009\nxdebug.remote_log = /var/log/xdebug.log\nxdebug.remote_enable = 1\nxdebug.remote_autostart = 1\n' >> /etc/php/7.1/cli/php.ini" \
-    && sudo bash -c "echo -e '\nzend_extension = /usr/lib/php/20190902/xdebug.so\n[XDebug]\nxdebug.remote_host = 127.0.0.1\nxdebug.remote_port = 9009\nxdebug.remote_log = /var/log/xdebug.log\nxdebug.remote_enable = 1\nxdebug.remote_autostart = 1\n' >> /etc/php/7.1/apache2/php.ini"
+# NOTE: Below is php version dependent (php.ini file path), so remember to change below if using another php version 
+RUN bash -c "echo -e 'xdebug.remote_host = 127.0.0.1\nxdebug.remote_port = 9000\nxdebug.remote_log = /var/log/xdebug.log\nxdebug.remote_enable = 1\nxdebug.remote_autostart = 1\n' >> /etc/php/7.1/cli/php.ini" \
+    bash -c "echo -e 'xdebug.remote_host = 127.0.0.1\nxdebug.remote_port = 9000\nxdebug.remote_log = /var/log/xdebug.log\nxdebug.remote_enable = 1\nxdebug.remote_autostart = 1\n' >> /etc/php/7.1/apache2/php.ini"
 
-### END: XDebug v2
+### END: XDebug 
 
 # Install latest composer
 #   since `apt-get install composer` seems to ONLY install version 1, so must do below
