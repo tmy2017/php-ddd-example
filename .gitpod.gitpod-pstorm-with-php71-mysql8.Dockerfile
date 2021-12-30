@@ -36,9 +36,9 @@ COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /h
 
 # download from github for custom commands and change to executable
 USER root
-ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/blob/main/.tmy-pstorm-launch-GITPOD_REPO_ROOT.sh /usr/local/bin/tmy-pstorm-launch-GITPOD_REPO_ROOT
-ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/blob/main/.tmy-save-ide-settings-through-image-for-gitpod.sh /usr/local/bin/tmy-save-ide-settings-through-image-for-gitpod
-ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/blob/main/.tmy-update-custom-cmds-from-usr-local-bin.sh /usr/local/bin/tmy-update-custom-cmds-from-usr-local-bin
+ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/main/.tmy-pstorm-launch-GITPOD_REPO_ROOT.sh /usr/local/bin/tmy-pstorm-launch-GITPOD_REPO_ROOT
+ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/main/.tmy-save-ide-settings-through-image-for-gitpod.sh /usr/local/bin/tmy-save-ide-settings-through-image-for-gitpod
+ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/main/.tmy-update-custom-cmds-from-usr-local-bin.sh /usr/local/bin/tmy-update-custom-cmds-from-usr-local-bin
 RUN chmod 555 /usr/local/bin/tmy-pstorm-launch-GITPOD_REPO_ROOT /usr/local/bin/tmy-save-ide-settings-through-image-for-gitpod /usr/local/bin/tmy-update-custom-cmds-from-usr-local-bin
 
 # return to gitpod as normal user
