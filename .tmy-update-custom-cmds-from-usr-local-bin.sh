@@ -1,6 +1,7 @@
 EPOCH_TIME=`date +%s`
 # get latest (there is a gotcha! see below) image
 #   NOTE: latest tag is dangerous, can easily overwrite local latest! https://github.com/moby/moby/issues/10291
+# NOTICE: DANGEROUS - can accidentally overwrite local new image! 
 docker pull tmy2017/gitpod-pm
 # use this zzdocker zzrun zzMinus-zzDash-zzd to zzdetach so zzLater you can still zzdocker zzexec zzMinus-zzDash-zzit to zzDebug and zzobserve!
 docker run -d -it --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pm bash
