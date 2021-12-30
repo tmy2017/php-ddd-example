@@ -6,7 +6,7 @@ docker pull tmy2017/gitpod-pstorm-with-php71-mysql8
 # use this zzdocker zzrun zzMinus-zzDash-zzd to zzdetach so zzLater you can still zzdocker zzexec zzMinus-zzDash-zzit to zzDebug and zzobserve!
 docker run -d -it --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pstorm-with-php71-mysql8 bash
 # directly copy what is inside CURRENT environment's updated custom command, so not repo (ex: tmy2017/php-ddd-example) specific 
-docker cp /usr/local/bin/tmy-persist-ide-settings-through-image-for-gitpod temp-for-image-commit-${EPOCH_TIME}:/usr/local/bin/tmy-persist-ide-settings-through-image-for-gitpod
+docker cp /usr/local/bin/tmy-save-ide-settings-through-image-for-gitpod temp-for-image-commit-${EPOCH_TIME}:/usr/local/bin/tmy-save-ide-settings-through-image-for-gitpod
 docker cp /usr/local/bin/tmy-update-custom-cmds-from-usr-local-bin temp-for-image-commit-${EPOCH_TIME}:/usr/local/bin/tmy-update-custom-cmds-from-usr-local-bin
 # also update the pstorm launch command for disabling ORG_JETBRAINS_PROJECTOR_SERVER_AUTO_KEYMAP
 #   see https://youtrack.jetbrains.com/issue/PRJ-121#focus=Comments-27-5198388.0-0 and
