@@ -12,6 +12,11 @@ docker cp /usr/local/bin/tmy-update-custom-cmds-from-usr-local-bin temp-for-imag
 #   see https://youtrack.jetbrains.com/issue/PRJ-121#focus=Comments-27-5198388.0-0 and
 #   https://jetbrains.github.io/projector-client/mkdocs/latest/ij_user_guide/server_customization/#list-of-parameters  
 docker cp /usr/local/bin/tmy-pstorm-launch-GITPOD_REPO_ROOT temp-for-image-commit-${EPOCH_TIME}:/usr/local/bin/tmy-pstorm-launch-GITPOD_REPO_ROOT
+
+# NOTICE !!! nasty-bug! MUST delete the mysqld.pid BEFORE docker commit, so mysqld next time when docker run will auto start again
+#   TODO: duplication is bad! update custom commands & save ide settings two scripts should be refactored 
+docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "rm -rf /var/run/mysqld/mysqld.pid"
+
 docker commit temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-pstorm-with-php71-mysql8
 docker tag tmy2017/gitpod-pstorm-with-php71-mysql8 tmy2017/gitpod-pstorm-with-php71-mysql8:ver-${EPOCH_TIME}
 docker push tmy2017/gitpod-pstorm-with-php71-mysql8:ver-${EPOCH_TIME}
