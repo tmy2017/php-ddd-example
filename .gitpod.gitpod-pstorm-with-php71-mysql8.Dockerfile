@@ -26,10 +26,20 @@ RUN projector --accept-license ide autoinstall --config-name PhpStormByIdeAutoin
 # copy previous image to this one 
 RUN mkdir -p .local/share/JetBrains
 # clean up folders which might be created by above projector install
- RUN rm -rf /home/gitpod/.config/JetBrains \
-     rm -rf /home/gitpod/.local/share/Jetbrains \ 
-     rm -rf /home/gitpod/.projector \
-     rm -rf /home/gitpod/.java/.userPrefs/jetbrains
+RUN rm -rf /home/gitpod/.config/JetBrains \
+    rm -rf /home/gitpod/.local/share/Jetbrains \ 
+    rm -rf /home/gitpod/.projector \
+    rm -rf /home/gitpod/.java/.userPrefs/jetbrains
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.config/JetBrains/ /home/gitpod/.config/
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.local/share/JetBrains/ /home/gitpod/.local/share/
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /home/gitpod/
+
+# download from github for custom commands and change to executable
+USER root
+ADD https://github.com/tmy2017/php-ddd-example/blob/main/.tmy-pstorm-launch-GITPOD_REPO_ROOT.sh /usr/local/bin/tmy-pstorm-launch-GITPOD_REPO_ROOT
+ADD https://github.com/tmy2017/php-ddd-example/blob/main/.tmy-save-ide-settings-through-image-for-gitpod.sh /usr/local/bin/tmy-save-ide-settings-through-image-for-gitpod
+ADD https://github.com/tmy2017/php-ddd-example/blob/main/.tmy-update-custom-cmds-from-usr-local-bin.sh /usr/local/bin/tmy-update-custom-cmds-from-usr-local-bin
+RUN chmod 555 /usr/local/bin/tmy-pstorm-launch-GITPOD_REPO_ROOT /usr/local/bin/tmy-save-ide-settings-through-image-for-gitpod /usr/local/bin/tmy-update-custom-cmds-from-usr-local-bin
+
+# return to gitpod as normal user
+USER gitpod
