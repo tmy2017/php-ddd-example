@@ -6,7 +6,7 @@ experimentalNetwork: true
 #   latest tag name, update below
 #   NOTE: in theory should not need the tag name, but seems gitpod is caching image locally, hence to use 
 #   tag name to ensure latest image is pulled
-image: tmy2017/gitpod-pm:ver-1640529918
+image: tmy2017/gitpod-pstorm-with-php71-mysql8:ver-1640944222
 
 tasks:
   # USAGE NOTE on PHPSTORMS in gitpod: 
@@ -54,3 +54,8 @@ vscode:
     - pkief.material-icon-theme
     - alefragnani.bookmarks
     - ms-vscode.live-server
+
+github:
+  prebuilds:
+    master: true
+    branches: true
