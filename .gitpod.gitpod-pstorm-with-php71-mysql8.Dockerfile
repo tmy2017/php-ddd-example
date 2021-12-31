@@ -1,5 +1,5 @@
 # use latest tag explicitly to signal the previous image data must carry on to this new one 
-FROM tmy2017/gitpod-pstorm-with-php71-mysql8:latest as prev-img-custom-cmds-and-pstorm-settings
+FROM tmy2017/gitpod-pstorm-with-php71-mysql8:ver-1640846949 as prev-img-custom-cmds-and-pstorm-settings
 FROM tmy2017/gitpod-php71-mysql8:latest
 # seems must change back to gitpod for the following phpstorm part to work - ex: .projector folder permission to be NOT root
 USER gitpod
@@ -30,9 +30,12 @@ RUN rm -rf /home/gitpod/.config/JetBrains \
     rm -rf /home/gitpod/.local/share/Jetbrains \ 
     rm -rf /home/gitpod/.projector \
     rm -rf /home/gitpod/.java/.userPrefs/jetbrains
-COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.config/JetBrains/ /home/gitpod/.config/
-COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.local/share/JetBrains/ /home/gitpod/.local/share/
-COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /home/gitpod/
+# seems Dockerfile COPY & `docker cp` have nuance differences?
+#    https://docs.docker.com/engine/reference/builder/#copy 
+#   https://docs.docker.com/engine/reference/commandline/cp
+COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.config/JetBrains/ /home/gitpod/.config/JetBrains/
+COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.local/share/JetBrains/ /home/gitpod/.local/share/JetBrains/
+COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /home/gitpod/.projector/
 
 # download from github for custom commands and change to executable
 USER root
