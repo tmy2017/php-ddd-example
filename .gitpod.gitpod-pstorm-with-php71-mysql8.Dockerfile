@@ -30,9 +30,6 @@ RUN rm -rf /home/gitpod/.config/JetBrains \
     rm -rf /home/gitpod/.local/share/Jetbrains \ 
     rm -rf /home/gitpod/.projector \
     rm -rf /home/gitpod/.java/.userPrefs/jetbrains
-# seems Dockerfile COPY & `docker cp` have nuance differences?
-#    https://docs.docker.com/engine/reference/builder/#copy 
-#   https://docs.docker.com/engine/reference/commandline/cp
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.config/JetBrains/ /home/gitpod/.config/JetBrains/
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.local/share/JetBrains/ /home/gitpod/.local/share/JetBrains/
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /home/gitpod/.projector/
