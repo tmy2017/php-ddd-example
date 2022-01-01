@@ -6,7 +6,7 @@ experimentalNetwork: true
 #   latest tag name, update below
 #   NOTE: in theory should not need the tag name, but seems gitpod is caching image locally, hence to use 
 #   tag name to ensure latest image is pulled
-image: tmy2017/gitpod-pm:ver-1640529918
+image: tmy2017/gitpod-pstorm-with-php71-mysql8:ver-1641066609
 
 tasks:
   # USAGE NOTE on PHPSTORMS in gitpod: 
@@ -46,11 +46,16 @@ vscode:
     - https://github.com/jimmygc/linenote-codelens/releases/download/1.0.1/linenote-codelens-1.0.1.vsix
     - bmewburn.vscode-intelephense-client
     - tabnine.tabnine-vscode
-    - eamodio.gitlens
+    # - eamodio.gitlens
     - ms-azuretools.vscode-docker
     - felixfbecker.php-debug
     - alexcvzz.vscode-sqlite
     - humao.rest-client
     - pkief.material-icon-theme
-    - alefragnani.bookmarks
+    # - alefragnani.bookmarks
     - ms-vscode.live-server
+
+github:
+  prebuilds:
+    master: true
+    branches: true
