@@ -5,5 +5,6 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+# due to gitpod, now comment out so to be persisted
+# /dataSources/
+# /dataSources.local.xml
