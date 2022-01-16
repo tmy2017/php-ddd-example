@@ -15,6 +15,8 @@ USER root
 
 # must install php-dev so xdebug can install successfully below
 # XDebug version is chosen by the Ubuntu Package Maintainer - ex: for php7.1 below is still XDebug 2
+# NOTE: !!! -y for add-apt-repository very surprisingly NOT needed when it's in Dockerfile RUN directive
+#   but when running in .gitpod.yml as before or init task, then MUST have -y
 RUN add-apt-repository ppa:ondrej/php -y && \
     install-packages php7.1 php7.1-xdebug php7.1-mysql php7.1-intl php7.1-mbstring php7.1-curl && \
     update-alternatives --set php /usr/bin/php7.1
