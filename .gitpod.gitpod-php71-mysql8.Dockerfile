@@ -6,7 +6,8 @@ FROM gitpod/workspace-mysql
 
 ### START: PHP v7.1 ###
 # thanks to corneliusludmann - https://community.gitpod.io/t/downgrade-default-php-v7-4-3-to-7-1-3-or-7-2/3099/4?u=tkgc 
-#   also on workspace-full https://github.com/gitpod-io/workspace-images/blob/master/full/Dockerfile#L26 
+#   NOTE: due to gitpod's dazzle v2 upgrade - now updated url - so now only in "legacy" folder
+#   also on workspace-full https://github.com/gitpod-io/workspace-images/blob/master/legacy/full/Dockerfile
 USER root
 
 # NOTICE: above is NOT `USER gitpod` hence the mysqld.pid problem will not occur. Therefore below is NOT needed
@@ -18,7 +19,7 @@ USER root
 # NOTE: !!! -y for add-apt-repository very surprisingly NOT needed when it's in Dockerfile RUN directive
 #   but when running in .gitpod.yml as before or init task, then MUST have -y
 RUN add-apt-repository ppa:ondrej/php -y && \
-    install-packages php7.1 php7.1-xdebug php7.1-mysql php7.1-intl php7.1-mbstring php7.1-curl && \
+    install-packages php7.1 php7.1-xdebug php7.1-mysql php7.1-intl php7.1-mbstring php7.1-curl php7.1-dom && \
     update-alternatives --set php /usr/bin/php7.1
 
 ### START: XDebug 
