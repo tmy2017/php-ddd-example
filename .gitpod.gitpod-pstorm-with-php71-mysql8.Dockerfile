@@ -1,6 +1,6 @@
 # use latest tag explicitly to signal the previous image data must carry on to this new one 
 FROM tmy2017/gitpod-pstorm-with-php71-mysql8:ver-1641418346 as prev-img-custom-cmds-and-pstorm-settings
-FROM tmy2017/gitpod-php71-mysql8:latest
+FROM tmy2017/gitpod-php71-mysql8:ver-1645287172
 # seems must change back to gitpod for the following phpstorm part to work - ex: .projector folder permission to be NOT root
 USER gitpod
 
