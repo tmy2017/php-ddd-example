@@ -17,7 +17,7 @@ RUN sudo apt-get -qq install -y patchutils python3 python3-pip libxext6 libxrend
 # seems due to PREVIOUSLY a mistake - https://github.com/gitpod-io/gitpod/issues/7077#issuecomment-988795394, then it's installed in non-workspace
 #   now it's fixed so I need to use -t target to force install in non-workspace so that when real project mount /workspace my projector will not be 
 #   overwritten
-RUN pip3 install projector-installer -t /home/gitpod/.pyenv/shims
+RUN pip3 install -t /home/gitpod/.pyenv/shims projector-installer 
 
 # strange syntax - main command projector must first accept GPL license or it would get stuck in docker build
 #   then the sub command ide autoinstall 
