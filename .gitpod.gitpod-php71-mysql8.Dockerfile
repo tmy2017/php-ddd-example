@@ -26,14 +26,16 @@ RUN add-apt-repository ppa:ondrej/php -y && \
         php7.1-bcmath \
         php7.1-ctype \
         php7.1-curl \
-        php7.1-date \
+        # for php7.1 does NOT exist the following Ubuntu package 
+        # php7.1-date \
         php7.1-dom \
         php7.1-gd \
         php7.1-intl \
         php7.1-json \
         php7.1-mbstring \
         php7.1-mysql \
-        php7.1-net-ftp \
+        # for php7.1 does NOT exist the following Ubuntu package 
+        # php7.1-net-ftp \
         php7.1-pgsql \
         php7.1-sqlite3 \
         php7.1-tokenizer \
