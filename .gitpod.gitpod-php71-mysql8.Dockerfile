@@ -21,7 +21,8 @@ USER root
 # Below extension list is based on experience and https://github.com/gitpod-io/workspace-images/blob/master/legacy/full/Dockerfile
 RUN add-apt-repository ppa:ondrej/php -y && \
     install-packages \
-        php7.1-all-dev \
+        # for php7.1 does NOT exist all-dev Ubuntu package 
+        # php7.1-all-dev \
         php7.1-bcmath \
         php7.1-ctype \
         php7.1-curl \
