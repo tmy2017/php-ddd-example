@@ -14,7 +14,10 @@ RUN sudo apt-get -qq update
 # Install required libraries for Projector + PhpStorm
 RUN sudo apt-get -qq install -y patchutils python3 python3-pip libxext6 libxrender1 libxtst6 libfreetype6 libxi6 telnet netcat
 # Install Projector
-RUN pip3 install projector-installer
+# seems due to PREVIOUSLY a mistake - https://github.com/gitpod-io/gitpod/issues/7077#issuecomment-988795394, then it's installed in non-workspace
+#   now it's fixed so I need to use -t target to force install in non-workspace so that when real project mount /workspace my projector will not be 
+#   overwritten
+RUN pip3 install projector-installer -t /home/gitpod/.pyenv/shims
 
 # strange syntax - main command projector must first accept GPL license or it would get stuck in docker build
 #   then the sub command ide autoinstall 
