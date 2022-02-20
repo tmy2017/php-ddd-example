@@ -1,5 +1,5 @@
 # use latest tag explicitly to signal the previous image data must carry on to this new one 
-FROM tmy2017/gitpod-pstorm-with-php71-mysql8:ver-1645340258 as prev-img-custom-cmds-and-pstorm-settings
+FROM tmy2017/gitpod-pstorm-with-php71-mysql8:ver-1645387802 as prev-img-custom-cmds-and-pstorm-settings
 FROM tmy2017/gitpod-php71-mysql8:ver-1645287172
 # seems must change back to gitpod for the following phpstorm part to work - ex: .projector folder permission to be NOT root
 USER gitpod
@@ -49,5 +49,6 @@ RUN chmod 555 /usr/local/bin/tmy-pstorm-launch-GITPOD_REPO_ROOT /usr/local/bin/t
 # custom xdebug 2/3 config for docker-compose.yml to refer to 
 ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/main/xdebug2.ini /usr/local/etc/xdebug2.ini
 ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/main/xdebug3.ini /usr/local/etc/xdebug3.ini
+RUN chmod 555 /usr/local/etc/xdebug2.ini /usr/local/etc/xdebug3.ini
 # return to gitpod as normal user
 USER gitpod
