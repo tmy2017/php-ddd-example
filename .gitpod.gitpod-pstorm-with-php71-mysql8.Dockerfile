@@ -46,5 +46,8 @@ ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/main/.tmy-save-ide
 ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/main/.tmy-update-custom-cmds-from-usr-local-bin.sh /usr/local/bin/tmy-update-custom-cmds-from-usr-local-bin
 RUN chmod 555 /usr/local/bin/tmy-pstorm-launch-GITPOD_REPO_ROOT /usr/local/bin/tmy-save-ide-settings-through-image-for-gitpod /usr/local/bin/tmy-update-custom-cmds-from-usr-local-bin
 
+# custom xdebug 2/3 config for docker-compose.yml to refer to 
+ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/main/xdebug2.ini /usr/local/etc/xdebug2.ini
+ADD https://raw.githubusercontent.com/tmy2017/php-ddd-example/main/xdebug3.ini /usr/local/etc/xdebug3.ini
 # return to gitpod as normal user
 USER gitpod
