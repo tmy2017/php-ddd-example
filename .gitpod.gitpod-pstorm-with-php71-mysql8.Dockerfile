@@ -1,5 +1,5 @@
 # use latest tag explicitly to signal the previous image data must carry on to this new one 
-FROM tmy2017/gitpod-pstorm-with-php71-mysql8:ver-1645287620 as prev-img-custom-cmds-and-pstorm-settings
+FROM tmy2017/gitpod-pstorm-with-php71-mysql8:ver-1645340258 as prev-img-custom-cmds-and-pstorm-settings
 FROM tmy2017/gitpod-php71-mysql8:ver-1645287172
 # seems must change back to gitpod for the following phpstorm part to work - ex: .projector folder permission to be NOT root
 USER gitpod
@@ -17,9 +17,9 @@ RUN sudo apt-get -qq install -y patchutils python3 python3-pip libxext6 libxrend
 # seems due to PREVIOUSLY a mistake - https://github.com/gitpod-io/gitpod/issues/7077#issuecomment-988795394, then it's installed in non-workspace
 #   now it's fixed so I need to use -t target to force install in non-workspace so that when real project mount /workspace my projector will not be 
 #   overwritten
-# also -t flag not working... must use PYTHONUSERBASE & PIP_USER
-#   Ref: https://github.com/pypa/pip/issues/446#issuecomment-48639007 & https://github.com/gitpod-io/gitpod/issues/7077#issuecomment-988795394 
-RUN PYTHONUSERBASE=/home/gitpod/.pyenv/shims PIP_USER=yes pip3 install projector-installer
+# both -t or PYTHONUSERBASE not working - seems pip3 is using system-wide instead of .pyenv version causing issue
+#   thus now force to use .pyenv/shims version 
+RUN /home/gitpod/.pyenv/shims/pip3 install projector-installer
 
 # strange syntax - main command projector must first accept GPL license or it would get stuck in docker build
 #   then the sub command ide autoinstall 
