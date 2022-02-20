@@ -44,13 +44,15 @@ RUN add-apt-repository ppa:ondrej/php -y && \
         php7.1-zip && \
     update-alternatives --set php /usr/bin/php7.1
 
-### START: XDebug 
+### START: Xdebug 
 # thanks to https://github.com/apolopena/Gitpod-PHP-Debug/blob/master/.gitpod.Dockerfile
 
 RUN touch /var/log/xdebug.log \
     && chmod 666 /var/log/xdebug.log
 
 # NOTE: Below is php version dependent (php.ini file path), so remember to change below if using another php version 
+# NOTE: below is Xdebug v2
+# if want to Xdebug v3 then https://github.com/prooph/docker-files/blob/master/php/config/xdebug.ini & https://xdebug.org/docs/upgrade_guide#New-Concepts
 RUN bash -c "echo -e 'xdebug.remote_host = 127.0.0.1\nxdebug.remote_port = 9000\nxdebug.remote_log = /var/log/xdebug.log\nxdebug.remote_enable = 1\nxdebug.remote_autostart = 1\n' >> /etc/php/7.1/cli/php.ini" \
     bash -c "echo -e 'xdebug.remote_host = 127.0.0.1\nxdebug.remote_port = 9000\nxdebug.remote_log = /var/log/xdebug.log\nxdebug.remote_enable = 1\nxdebug.remote_autostart = 1\n' >> /etc/php/7.1/apache2/php.ini"
 
