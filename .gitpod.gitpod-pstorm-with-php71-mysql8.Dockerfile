@@ -42,10 +42,12 @@ RUN sudo chown -R gitpod:gitpod /home/gitpod/.config && \
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.config/JetBrains/ /home/gitpod/.config/JetBrains/
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.local/share/JetBrains/ /home/gitpod/.local/share/JetBrains/
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /home/gitpod/.projector/
-# seems really cp UNIX command and COPY Dockerfile directive really has nuance? gosh that ending slash can not be there!
-RUN cp -r /home/gitpod/.config/JetBrains/PhpStorm2021.2 /home/gitpod/.config/JetBrains/PhpStorm2021.3 && \
-    cp -r /home/gitpod/.local/share/JetBrains/PhpStorm2021.2 /home/gitpod/.local/share/JetBrains/PhpStorm2021.3
-    # .projector not needed to copy, since there will be new folder created
+
+# Should not do - would be NOT idempotent
+# # seems really cp UNIX command and COPY Dockerfile directive really has nuance? gosh that ending slash can not be there!
+# RUN cp -r /home/gitpod/.config/JetBrains/PhpStorm2021.2 /home/gitpod/.config/JetBrains/PhpStorm2021.3 && \
+#     cp -r /home/gitpod/.local/share/JetBrains/PhpStorm2021.2 /home/gitpod/.local/share/JetBrains/PhpStorm2021.3
+#     # .projector not needed to copy, since there will be new folder created
 
 
 
