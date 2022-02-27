@@ -42,8 +42,9 @@ COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /h
 RUN sudo chown -R gitpod:gitpod /home/gitpod/.config && \
     projector --accept-license ide autoinstall --config-name PhpStormByIdeAutoinstall-2021.3 --ide-name "PhpStorm 2021.3" --port 19999
 ### Then copy previous to new 
-RUN cp -r /home/gitpod/.config/JetBrains/PhpStorm2021.2/ /home/gitpod/.config/JetBrains/PhpStorm2021.3/ && \
-    cp -r /home/gitpod/.local/share/JetBrains/PhpStorm2021.2/ /home/gitpod/.local/share/JetBrains/PhpStorm2021.3/
+# seems really cp UNIX command and COPY Dockerfile directive really has nuance? gosh that ending slash can not be there!
+RUN cp -r /home/gitpod/.config/JetBrains/PhpStorm2021.2 /home/gitpod/.config/JetBrains/PhpStorm2021.3 && \
+    cp -r /home/gitpod/.local/share/JetBrains/PhpStorm2021.2 /home/gitpod/.local/share/JetBrains/PhpStorm2021.3
     # .projector not needed to copy, since there will be new folder created
 
 
