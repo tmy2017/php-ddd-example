@@ -28,11 +28,7 @@ RUN rm -rf /home/gitpod/.config/JetBrains \
     rm -rf /home/gitpod/.local/share/Jetbrains \ 
     rm -rf /home/gitpod/.projector \
     rm -rf /home/gitpod/.java/.userPrefs/jetbrains
-COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.config/JetBrains/ /home/gitpod/.config/JetBrains/
-COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.local/share/JetBrains/ /home/gitpod/.local/share/JetBrains/
-COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /home/gitpod/.projector/
-
-### Then install the new version ###
+### Then install the new version BEFORE copy from previous image ###
 # strange syntax - main command projector must first accept GPL license or it would get stuck in docker build
 #   then the sub command ide autoinstall 
 # Install PhpStorm 
@@ -41,7 +37,11 @@ COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /h
 # From previous image could be wrong ownership, now correct so projector install will not fail
 RUN sudo chown -R gitpod:gitpod /home/gitpod/.config && \
     projector --accept-license ide autoinstall --config-name PhpStormByIdeAutoinstall-2021.3 --ide-name "PhpStorm 2021.3" --port 19999
+
 ### Then copy previous to new 
+COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.config/JetBrains/ /home/gitpod/.config/JetBrains/
+COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.local/share/JetBrains/ /home/gitpod/.local/share/JetBrains/
+COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /home/gitpod/.projector/
 # seems really cp UNIX command and COPY Dockerfile directive really has nuance? gosh that ending slash can not be there!
 RUN cp -r /home/gitpod/.config/JetBrains/PhpStorm2021.2 /home/gitpod/.config/JetBrains/PhpStorm2021.3 && \
     cp -r /home/gitpod/.local/share/JetBrains/PhpStorm2021.2 /home/gitpod/.local/share/JetBrains/PhpStorm2021.3
