@@ -21,14 +21,7 @@ RUN sudo apt-get -qq install -y patchutils python3 python3-pip libxext6 libxrend
 #   thus now force to use .pyenv/shims version 
 RUN /home/gitpod/.pyenv/shims/pip3 install projector-installer
 
-# strange syntax - main command projector must first accept GPL license or it would get stuck in docker build
-#   then the sub command ide autoinstall 
-# Install PhpStorm 
-#   as of (9-Dec-2021T10-37+0100) `projector find` informs 2021.2 is tested version
-#   more info on command - https://github.com/JetBrains/projector-installer/blob/master/COMMANDS.md#ide-commands
-RUN projector --accept-license ide autoinstall --config-name PhpStormByIdeAutoinstall-2021.2 --ide-name "PhpStorm 2021.2" --port 19999
-
-# copy previous image to this one 
+### First copy previous image to this one ###
 RUN mkdir -p .local/share/JetBrains
 # clean up folders which might be created by above projector install
 RUN rm -rf /home/gitpod/.config/JetBrains \
@@ -38,6 +31,18 @@ RUN rm -rf /home/gitpod/.config/JetBrains \
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.config/JetBrains/ /home/gitpod/.config/JetBrains/
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.local/share/JetBrains/ /home/gitpod/.local/share/JetBrains/
 COPY --from=prev-img-custom-cmds-and-pstorm-settings /home/gitpod/.projector/ /home/gitpod/.projector/
+
+### Then install the new version ###
+# strange syntax - main command projector must first accept GPL license or it would get stuck in docker build
+#   then the sub command ide autoinstall 
+# Install PhpStorm 
+#   as of (9-Dec-2021T10-37+0100) `projector find` informs 2021.2 is tested version
+#   more info on command - https://github.com/JetBrains/projector-installer/blob/master/COMMANDS.md#ide-commands
+RUN projector --accept-license ide autoinstall --config-name PhpStormByIdeAutoinstall-2021.3 --ide-name "PhpStorm 2021.3" --port 19999
+### Then copy previous to new 
+RUN cp -r /home/gitpod/.config/JetBrains/PhpStorm2021.2/ /home/gitpod/.config/JetBrains/PhpStorm2021.3/ \
+    cp -r /home/gitpod/.local/share/JetBrains/PhpStorm2021.2/ /home/gitpod/.local/share/JetBrains/PhpStorm2021.3/
+    # .projector not needed to copy, since there will be new folder created
 
 # download from github for custom commands and change to executable
 USER root
