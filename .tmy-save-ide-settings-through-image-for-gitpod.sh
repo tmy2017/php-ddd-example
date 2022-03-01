@@ -32,8 +32,8 @@ docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "rm -rf /var/run/mysq
 
 # delete license related info in .config folder
 #   use -f to skip error
-docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "rm -f /home/gitpod/.config/JetBrains/PhpStorm2021.2/phpstorm.key"
-docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "rm -f /home/gitpod/.config/JetBrains/PhpStorm2021.2/plugin_PCWMP.license"
+docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "rm -f /home/gitpod/.config/JetBrains/PhpStorm2021.3/phpstorm.key"
+docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "rm -f /home/gitpod/.config/JetBrains/PhpStorm2021.3/plugin_PCWMP.license"
 # remove past trial license left .java/.userPrefs data - if any
 docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "rm -rf /home/gitpod/.java/.userPrefs/jetbrains/"
 
