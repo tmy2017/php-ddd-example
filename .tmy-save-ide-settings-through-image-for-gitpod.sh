@@ -55,3 +55,4 @@ docker push tmy2017/gitpod-pstorm-with-php71-mysql8:ver-${EPOCH_TIME}
 
 echo "success - the newest image name with tag is: tmy2017/gitpod-pstorm-with-php71-mysql8:ver-${EPOCH_TIME}"
 echo "please remember to update .gitpod.yml image name to ensure it has latest image"
+echo "MUST remember phpstorm plugin update needs to first RESTART so ~/.local/JetBrains/__VER__/PLUGIN_XYZ can really be installed! (5-Mar-2022T09-26+0100)"
