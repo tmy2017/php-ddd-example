@@ -1,3 +1,5 @@
+;;; NOTE: real in use is etc/infrastructure/php/conf.d/xdebug.ini ;;;
+
 ; XDebug2 config
 zend_extension=xdebug.so
 xdebug.default_enable=1
