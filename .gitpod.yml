@@ -1,6 +1,3 @@
-# from https://github.com/gitpod-io/gitpod/pull/6409 for host.gateway.internal zz-_48-_y21-1203-2144
-experimentalNetwork: true
-
 # use docker image to persist phpstorm ide settings across new workspace or reboot 
 #   Simply use `tmy-persist-ide-settings-through-image-for-gitpod` (should be in image already), then get the 
 #   latest tag name, update below
