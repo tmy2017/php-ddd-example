@@ -213,7 +213,7 @@
     </option>
   </component>
   <component name="RunManager" selected="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses">
-    <configuration name="ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="backoffice_backend_php" />
@@ -224,7 +224,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses" />
         <item itemvalue="PHPUnit.CourseRenamerTest.it_should_rename_an_existing_course" />
       </list>
     </recent_temporary>
