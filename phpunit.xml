@@ -28,6 +28,13 @@
         <env name="APP_ENV" value="test"/>
     </php>
 
+    <coverage cacheDirectory=".phpunit.cache/code-coverage"
+              processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </coverage>
+
     <testsuites>
         <testsuite name="backoffice">
             <directory>./tests/Backoffice</directory>

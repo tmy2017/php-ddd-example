@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e191878b-e653-4cc9-aa8b-532924dbb5ed" name="Changes" comment="">
+    <list default="true" id="e191878b-e653-4cc9-aa8b-532924dbb5ed" name="Changes" comment="fix cannot find file _____ locally&#10;    to fix it set server name by environment variable PHP_IDE_CONFIG - thus turn on &quot;force break at first line when no path mapping specified&quot;  or &quot;&quot;">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vscode/linenote.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/linenote.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +50,7 @@
       </server>
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="backoffice_backend_php">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/react/promise" />
@@ -191,13 +197,37 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm" value="Docker Compose" />
+    <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm" value="Docker Compose" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="ls" />
+    </option>
+  </component>
+  <component name="RunManager" selected="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses">
+    <configuration name="ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="backoffice_backend_php" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="CodelyTv\Tests\Backoffice\Courses\Infrastructure\Persistence\ElasticsearchBackofficeCourseRepositoryTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Backoffice/Courses/Infrastructure/Persistence/ElasticsearchBackofficeCourseRepositoryTest.php" method="it_should_search_all_existing_courses" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses" />
+        <item itemvalue="PHPUnit.CourseRenamerTest.it_should_rename_an_existing_course" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -211,8 +241,16 @@
       <workItem from="1640945322274" duration="601000" />
       <workItem from="1641063558340" duration="1403000" />
       <workItem from="1641066271033" duration="67000" />
-      <workItem from="1647205698309" duration="424000" />
+      <workItem from="1647205698309" duration="1332000" />
     </task>
+    <task id="LOCAL-00001" summary="fix cannot find file _____ locally&#10;    to fix it set server name by environment variable PHP_IDE_CONFIG - thus turn on &quot;force break at first line when no path mapping specified&quot;  or &quot;&quot;">
+      <created>1647206397158</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647206397158</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +266,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix cannot find file _____ locally&#10;    to fix it set server name by environment variable PHP_IDE_CONFIG - thus turn on &quot;force break at first line when no path mapping specified&quot;  or &quot;&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix cannot find file _____ locally&#10;    to fix it set server name by environment variable PHP_IDE_CONFIG - thus turn on &quot;force break at first line when no path mapping specified&quot;  or &quot;&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
