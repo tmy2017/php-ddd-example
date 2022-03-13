@@ -8,3 +8,4 @@
 # due to gitpod, now comment out so to be persisted
 # /dataSources/
 # /dataSources.local.xml
+/sonarlint
