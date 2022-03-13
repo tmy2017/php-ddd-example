@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CourseRenamerTest.it_should_rename_an_existing_course" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+    <CommandLine>
+      <PhpTestInterpreterSettings>
+        <option name="interpreterName" value="backoffice_backend_php" />
+      </PhpTestInterpreterSettings>
+    </CommandLine>
+    <TestRunner class="CodelyTv\Tests\Mooc\Courses\Application\Update\CourseRenamerTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Mooc/Courses/Application/Update/CourseRenamerTest.php" method="it_should_rename_an_existing_course" scope="Method" />
+    <method v="2" />
+  </configuration>
+</component>
