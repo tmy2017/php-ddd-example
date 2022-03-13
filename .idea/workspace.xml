@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e191878b-e653-4cc9-aa8b-532924dbb5ed" name="Changes" comment="add code coverage setting into phpunit.xml - by vendor/bin/phpunit --generate-configuration">
+    <list default="true" id="e191878b-e653-4cc9-aa8b-532924dbb5ed" name="Changes" comment="update pstorm workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vscode/linenote.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/linenote.db" afterDir="false" />
     </list>
@@ -27,6 +27,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -204,7 +207,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunAnythingCache">
@@ -212,7 +215,7 @@
       <command value="ls" />
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses">
+  <component name="RunManager" selected="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest">
     <configuration name="CourseRenamerTest.it_should_throw_an_exception_when_the_course_not_exist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner class="CodelyTv\Tests\Mooc\Courses\Application\Update\CourseRenamerTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Mooc/Courses/Application/Update/CourseRenamerTest.php" method="it_should_throw_an_exception_when_the_course_not_exist" scope="Method" />
       <method v="2" />
@@ -226,11 +229,17 @@
       <TestRunner class="CodelyTv\Tests\Backoffice\Courses\Infrastructure\Persistence\ElasticsearchBackofficeCourseRepositoryTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Backoffice/Courses/Infrastructure/Persistence/ElasticsearchBackofficeCourseRepositoryTest.php" method="it_should_search_all_existing_courses" scope="Method" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHPUnit.CourseRenamerTest.it_should_rename_an_existing_course" />
-      </list>
-    </recent_temporary>
+    <configuration name="ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses_with_an_empty_criteria" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner class="CodelyTv\Tests\Backoffice\Courses\Infrastructure\Persistence\ElasticsearchBackofficeCourseRepositoryTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Backoffice/Courses/Infrastructure/Persistence/ElasticsearchBackofficeCourseRepositoryTest.php" method="it_should_search_all_existing_courses_with_an_empty_criteria" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHPUnit.CourseRenamerTest.it_should_rename_an_existing_course" />
+      <item itemvalue="PHPUnit.CourseRenamerTest.it_should_throw_an_exception_when_the_course_not_exist" />
+      <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses" />
+      <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest" />
+      <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses_with_an_empty_criteria" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -244,7 +253,8 @@
       <workItem from="1640945322274" duration="601000" />
       <workItem from="1641063558340" duration="1403000" />
       <workItem from="1641066271033" duration="67000" />
-      <workItem from="1647205698309" duration="1912000" />
+      <workItem from="1647205698309" duration="2061000" />
+      <workItem from="1647207791659" duration="163000" />
     </task>
     <task id="LOCAL-00001" summary="fix cannot find file _____ locally&#10;    to fix it set server name by environment variable PHP_IDE_CONFIG - thus turn on &quot;force break at first line when no path mapping specified&quot;  or &quot;&quot;">
       <created>1647206397158</created>
@@ -274,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647207129333</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update pstorm workspace.xml">
+      <created>1647207749567</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647207749567</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +311,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix cannot find file _____ locally&#10;    to fix it set server name by environment variable PHP_IDE_CONFIG - thus turn on &quot;force break at first line when no path mapping specified&quot;  or &quot;&quot;" />
     <MESSAGE value="add code coverage setting into phpunit.xml - by vendor/bin/phpunit --generate-configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="add code coverage setting into phpunit.xml - by vendor/bin/phpunit --generate-configuration" />
+    <MESSAGE value="update pstorm workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="update pstorm workspace.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -313,6 +331,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/php_ddd_example@ElasticsearchBackofficeCourseRepositoryTest.xml" NAME="ElasticsearchBackofficeCourseRepositoryTest Coverage Results" MODIFIED="1647207910863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/php_ddd_example@ElasticsearchBackofficeCourseRepositoryTest_it_should_search_all_existing_courses.xml" NAME="ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses Coverage Results" MODIFIED="1647207054092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

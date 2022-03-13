@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ElasticsearchBackofficeCourseRepositoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+    <TestRunner class="CodelyTv\Tests\Backoffice\Courses\Infrastructure\Persistence\ElasticsearchBackofficeCourseRepositoryTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Backoffice/Courses/Infrastructure/Persistence/ElasticsearchBackofficeCourseRepositoryTest.php" scope="Class" />
+    <method v="2" />
+  </configuration>
+</component>
