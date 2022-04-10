@@ -32,6 +32,8 @@
 </p>
 
 ## 🚀 Environment Setup
+### for Gitpod
+* MUST use local companion to make course list correctly due to hardcoded localhost
 
 ### 🐳 Needed tools
 
