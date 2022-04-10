@@ -3,7 +3,7 @@
 #   latest tag name, update below
 #   NOTE: in theory should not need the tag name, but seems gitpod is caching image locally, hence to use 
 #   tag name to ensure latest image is pulled
-image: tmy2017/gitpod-pstorm-with-php71-mysql8:ver-1649603967 
+image: tmy2017/gitpod-pstorm-with-php71-mysql8:ver-1649603968 
 
 tasks:
   # USAGE NOTE on PHPSTORMS in gitpod: 
