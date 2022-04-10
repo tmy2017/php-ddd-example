@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e191878b-e653-4cc9-aa8b-532924dbb5ed" name="Changes" comment="update pstorm workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vscode/linenote.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/linenote.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +18,14 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,14 +51,9 @@
   </component>
   <component name="PhpServers">
     <servers>
-      <server host="8041-lavender-centipede-t84ugbhm.ws-eu25.gitpod.io" id="28678cbc-71ec-4f08-810a-03e760a7c2ac" name="8041-lavender-centipede-t84ugbhm.ws-eu25.gitpod.io" port="8041" use_path_mappings="true">
+      <server host="8041-tmy2017-phpdddexample-vt6a6k6v25n.ws-eu39.gitpod.io" id="a3f2163e-7324-4fc7-b660-98039f543495" name="8041-tmy2017-phpdddexample-vt6a6k6v25n.ws-eu39.gitpod.io" port="8041" use_path_mappings="true">
         <path_mappings>
-          <mapping local-root="$PROJECT_DIR$/apps/backoffice" remote-root="/app/apps/backoffice" />
-        </path_mappings>
-      </server>
-      <server host="8041-tmy2017-phpdddexample-8uubclgejhe.ws-eu34.gitpod.io" id="f661d0be-0326-441f-8122-91da9b46063a" name="8041-tmy2017-phpdddexample-8uubclgejhe.ws-eu34.gitpod.io" port="8041" use_path_mappings="true">
-        <path_mappings>
-          <mapping local-root="$PROJECT_DIR$/apps/backoffice/frontend/public" remote-root="/app/apps/backoffice/frontend/public" />
+          <mapping local-root="$PROJECT_DIR$" remote-root="/app" />
         </path_mappings>
       </server>
     </servers>
@@ -196,6 +202,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
@@ -203,11 +210,13 @@
     <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm" value="Docker Compose" />
     <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm" value="Docker Compose" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunAnythingCache">
@@ -234,11 +243,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="PHPUnit.CourseRenamerTest.it_should_rename_an_existing_course" />
       <item itemvalue="PHPUnit.CourseRenamerTest.it_should_throw_an_exception_when_the_course_not_exist" />
       <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses" />
-      <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest" />
       <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses_with_an_empty_criteria" />
+      <item itemvalue="PHPUnit.CourseRenamerTest.it_should_rename_an_existing_course" />
+      <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -255,6 +264,11 @@
       <workItem from="1641066271033" duration="67000" />
       <workItem from="1647205698309" duration="2061000" />
       <workItem from="1647207791659" duration="277000" />
+      <workItem from="1649591577450" duration="2191000" />
+      <workItem from="1649593811548" duration="626000" />
+      <workItem from="1649594561986" duration="48000" />
+      <workItem from="1649594682769" duration="324000" />
+      <workItem from="1649595230884" duration="69000" />
     </task>
     <task id="LOCAL-00001" summary="fix cannot find file _____ locally&#10;    to fix it set server name by environment variable PHP_IDE_CONFIG - thus turn on &quot;force break at first line when no path mapping specified&quot;  or &quot;&quot;">
       <created>1647206397158</created>
@@ -334,8 +348,17 @@
           <line>8</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Shared/Domain/ValueObject/Uuid.php</url>
+          <line>40</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/php_ddd_example@ElasticsearchBackofficeCourseRepositoryTest.xml" NAME="ElasticsearchBackofficeCourseRepositoryTest Coverage Results" MODIFIED="1647207910863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

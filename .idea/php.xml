@@ -212,15 +212,6 @@
       </interpreter>
     </phpInfoCache>
   </component>
-  <component name="PhpProjectServersManager">
-    <servers>
-      <server host="8041-lavender-centipede-t84ugbhm.ws-eu25.gitpod.io" id="28678cbc-71ec-4f08-810a-03e760a7c2ac" name="8041-lavender-centipede-t84ugbhm.ws-eu25.gitpod.io" port="8041" use_path_mappings="true">
-        <path_mappings>
-          <mapping local-root="$PROJECT_DIR$/apps/backoffice" remote-root="/app/apps/backoffice" />
-        </path_mappings>
-      </server>
-    </servers>
-  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
   <component name="PhpUnit">
     <phpunit_settings>
