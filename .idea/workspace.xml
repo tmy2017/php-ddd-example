@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e191878b-e653-4cc9-aa8b-532924dbb5ed" name="Changes" comment="update pstorm workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vscode/linenote.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/linenote.db" afterDir="false" />
     </list>
@@ -269,6 +267,7 @@
       <workItem from="1649594561986" duration="48000" />
       <workItem from="1649594682769" duration="324000" />
       <workItem from="1649595230884" duration="69000" />
+      <workItem from="1649607356407" duration="272000" />
     </task>
     <task id="LOCAL-00001" summary="fix cannot find file _____ locally&#10;    to fix it set server name by environment variable PHP_IDE_CONFIG - thus turn on &quot;force break at first line when no path mapping specified&quot;  or &quot;&quot;">
       <created>1647206397158</created>
