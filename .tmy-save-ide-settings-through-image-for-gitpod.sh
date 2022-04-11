@@ -11,6 +11,10 @@ docker run -d -it --name temp-for-image-commit-${EPOCH_TIME} tmy2017/gitpod-psto
 # prepare folders in case it does not exist
 docker exec temp-for-image-commit-${EPOCH_TIME} /bin/sh -c "mkdir -p .local/share/JetBrains"
 
+# fix seems cache folder also needs to be included - to fix "mysteriously disappeared plugin" (and settings) (11-Apr-2022T10-37+0200)
+#	https://intellij-support.jetbrains.com/hc/en-us/articles/206544519
+docker cp /home/gitpod/.cache/JetBrains/PhpStorm2021.3 temp-for-image-commit-${EPOCH_TIME}:/home/gitpod/.cache/JetBrains/
+
 # NOTE: docker cp has no glob pattern! https://github.com/moby/moby/issues/7710
 # NOTICE: 
 # 1) copy files and directories inherently looks different - directories is whole folder
