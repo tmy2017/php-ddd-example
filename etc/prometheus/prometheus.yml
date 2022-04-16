@@ -13,9 +13,9 @@ scrape_configs:
   - job_name: 'backoffice_frontend'
     scrape_interval: 5s
     static_configs:
-      - targets: ['codelytv-php_ddd_skeleton-backoffice_frontend-nginx:80']
+      - targets: ['backoffice_frontend:8031']
 
   - job_name: 'mooc_backend'
     scrape_interval: 5s
     static_configs:
-      - targets: ['codelytv-php_ddd_skeleton-mooc_backend-nginx:80']
+      - targets: ['mooc_backend_php:8030']
