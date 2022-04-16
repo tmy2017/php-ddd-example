@@ -24,6 +24,16 @@
 					"label": ""
 				}
 			]
+		},
+		{
+			"path": "etc/prometheus/prometheus.yml",
+			"bookmarks": [
+				{
+					"line": 10,
+					"column": 73,
+					"label": ""
+				}
+			]
 		}
 	]
 }
