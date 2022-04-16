@@ -28,11 +28,6 @@ tasks:
     openMode: split-right
 # direct open preview   
 ports:
-  # open browser could be blocked by browser
-  - port: 19999
-    onOpen: open-browser
-  - port: 1000-9000
-    onOpen: ignore
 # still applied even above implicitly says ignore! 
 # NOTE: can not have more than two using onOpen: open-preview
   - port: 8041
