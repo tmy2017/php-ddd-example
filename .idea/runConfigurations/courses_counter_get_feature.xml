@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="courses_counter_get.feature" type="PhpBehatConfigurationType">
+    <BehatRunner file="$PROJECT_DIR$/apps/mooc/backend/tests/features/courses_counter/courses_counter_get.feature" scenario="" scope="File" options="-p mooc_backend" />
+    <CommandLine workingDirectory="$PROJECT_DIR$" />
+    <method v="2" />
+  </configuration>
+</component>

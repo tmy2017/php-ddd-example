@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="features" type="PhpBehatConfigurationType">
+    <BehatRunner directory="$PROJECT_DIR$/apps/mooc/backend/tests/features" file="$PROJECT_DIR$/apps/mooc/backend/tests/features/courses/course_put.feature" scenario="A valid non existing course" options="-p mooc_backend" />
+    <CommandLine workingDirectory="$PROJECT_DIR$/" />
+    <method v="2" />
+  </configuration>
+</component>
