@@ -9,6 +9,8 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="CodelyTv\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="CodelyTv\Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/backoffice/frontend/var" />
+      <excludeFolder url="file://$MODULE_DIR$/apps/backoffice/backend/var" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

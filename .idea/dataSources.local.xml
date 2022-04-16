@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="PS-213.5744.279">
-    <data-source name="@localhost" uuid="9c053ecd-a3d5-47d1-a1a3-691751ea210b">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" exact-version="0" />
-      <secret-storage>forget</secret-storage>
-      <schema-mapping />
+    <data-source name="@localhost [2]" uuid="01e0c577-0b50-43a5-abc8-c40e1dc0c8cc">
+      <database-info product="MariaDB" version="10.6.7-MariaDB-1:10.6.7+maria~focal" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MARIADB" exact-version="10.6.7" exact-driver-version="2.7">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" negative="1" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>

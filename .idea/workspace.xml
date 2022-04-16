@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e191878b-e653-4cc9-aa8b-532924dbb5ed" name="Changes" comment="update pstorm workspace.xml">
+      <change afterPath="$PROJECT_DIR$/etc/databases/hihi/mooc/backoffice_courses.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/etc/databases/hihi/mooc/courses.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/etc/databases/hihi/mooc/courses_counter.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/etc/databases/hihi/mooc/domain_events.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php-ddd-example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-ddd-example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php-test-framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/bookmarks.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/bookmarks.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vscode/linenote.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/linenote.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/etc/prometheus/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/etc/prometheus/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +32,7 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -42,16 +53,36 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" xdebug_force_break_when_no_path_mapping="false">
+  <component name="PhpDebugGeneral" listening_started="true" notify_if_session_was_finished_without_being_paused="false" xdebug_force_break_when_no_path_mapping="false">
     <xdebug_debug_ports port="9000" />
     <xdebug_debug_ports port="9003" />
     <xdebug_debug_ports port="9001" />
   </component>
   <component name="PhpServers">
     <servers>
-      <server host="8041-tmy2017-phpdddexample-vt6a6k6v25n.ws-eu39.gitpod.io" id="a3f2163e-7324-4fc7-b660-98039f543495" name="8041-tmy2017-phpdddexample-vt6a6k6v25n.ws-eu39.gitpod.io" port="8041" use_path_mappings="true">
+      <server host="localhost:8030" id="ee43a230-ffb6-4931-acb0-9e9acdc860cc" name="localhost:8030" port="8030" use_path_mappings="true">
         <path_mappings>
           <mapping local-root="$PROJECT_DIR$" remote-root="/app" />
+        </path_mappings>
+      </server>
+      <server host="8041-tmy2017-phpdddexample-vbroghru48w.ws-eu39b.gitpod.io" id="aae2be44-495f-4fe7-93e5-7fe316e38453" name="8041-tmy2017-phpdddexample-vbroghru48w.ws-eu39b.gitpod.io" port="8041" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/apps/backoffice/frontend/public" remote-root="/app/apps/backoffice/frontend/public" />
+        </path_mappings>
+      </server>
+      <server host="localhost:8040" id="043c43ea-8b5a-4e87-9ac2-6c6e0671a54b" name="localhost:8040" port="8040" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/apps/backoffice/backend/public" remote-root="/app/apps/backoffice/backend/public" />
+        </path_mappings>
+      </server>
+      <server host="mooc_backend_php:8030" id="3154990e-e442-4acf-9c46-e31b3a9e1bbe" name="mooc_backend_php:8030" port="8030" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/apps/mooc/backend/public" remote-root="/app/apps/mooc/backend/public" />
+        </path_mappings>
+      </server>
+      <server host="8041-tmy2017-phpdddexample-vbroghru48w.ws-eu40.gitpod.io" id="6348db13-bf18-49f9-a060-90ca345119d6" name="8041-tmy2017-phpdddexample-vbroghru48w.ws-eu40.gitpod.io" port="8041" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/apps/backoffice/frontend/public" remote-root="/app/apps/backoffice/frontend/public" />
         </path_mappings>
       </server>
     </servers>
@@ -195,18 +226,25 @@
     </include_path>
   </component>
   <component name="ProjectId" id="22ElchAXrvJ7oAsn5w2FyImR8Ox" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="HTTP Request" />
     <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm" value="Docker Compose" />
     <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm" value="Docker Compose" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -214,7 +252,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunAnythingCache">
@@ -222,9 +260,16 @@
       <command value="ls" />
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest">
+  <component name="RunManager" selected="Behat.features">
+    <configuration name="hi | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/hi.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="CourseRenamerTest.it_should_throw_an_exception_when_the_course_not_exist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner class="CodelyTv\Tests\Mooc\Courses\Application\Update\CourseRenamerTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Mooc/Courses/Application/Update/CourseRenamerTest.php" method="it_should_throw_an_exception_when_the_course_not_exist" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateCourseCommandHandlerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="CodelyTv\Tests\Mooc\Courses\Application\Create\CreateCourseCommandHandlerTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Mooc/Courses/Application/Create/CreateCourseCommandHandlerTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -240,13 +285,52 @@
       <TestRunner class="CodelyTv\Tests\Backoffice\Courses\Infrastructure\Persistence\ElasticsearchBackofficeCourseRepositoryTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Backoffice/Courses/Infrastructure/Persistence/ElasticsearchBackofficeCourseRepositoryTest.php" method="it_should_search_all_existing_courses_with_an_empty_criteria" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="RabbitMqEventBusTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner class="CodelyTv\Tests\Shared\Infrastructure\Bus\Event\RabbitMq\RabbitMqEventBusTest" configuration_file="/app/phpunit.xml" file="$PROJECT_DIR$/tests/Shared/Infrastructure/Bus/Event/RabbitMq/RabbitMqEventBusTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="course_put.feature::A valid non existing course" type="PhpBehatConfigurationType" temporary="true">
+      <BehatRunner file="$PROJECT_DIR$/apps/mooc/backend/tests/features/courses/course_put.feature" scenario="A valid non existing course" scope="Scenario" />
+      <method v="2" />
+    </configuration>
+    <configuration name="courses_counter_get.feature::With more than one course having duplicates" type="PhpBehatConfigurationType" temporary="true">
+      <BehatRunner file="$PROJECT_DIR$/apps/mooc/backend/tests/features/courses_counter/courses_counter_get.feature" scenario="With more than one course having duplicates" scope="Scenario" />
+      <method v="2" />
+    </configuration>
+    <configuration name="courses_counter_get.feature::With one course" type="PhpBehatConfigurationType" temporary="true">
+      <BehatRunner file="$PROJECT_DIR$/apps/mooc/backend/tests/features/courses_counter/courses_counter_get.feature" scenario="With one course" scope="Scenario" options="-p mooc_backend" />
+      <CommandLine workingDirectory="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Behat.features" />
+      <item itemvalue="Behat.courses_counter_get.feature" />
+      <item itemvalue="Behat.courses_counter_get.feature::With one course" />
+      <item itemvalue="Behat.courses_counter_get.feature::With more than one course having duplicates" />
+      <item itemvalue="HTTP Request.hi | #1" />
+      <item itemvalue="PHPUnit.RabbitMqEventBusTest" />
       <item itemvalue="PHPUnit.CourseRenamerTest.it_should_throw_an_exception_when_the_course_not_exist" />
       <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses" />
       <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest.it_should_search_all_existing_courses_with_an_empty_criteria" />
       <item itemvalue="PHPUnit.CourseRenamerTest.it_should_rename_an_existing_course" />
       <item itemvalue="PHPUnit.ElasticsearchBackofficeCourseRepositoryTest" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.CreateCourseCommandHandlerTest" />
+      <item itemvalue="Behat.course_put.feature::A valid non existing course" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Behat.course_put.feature::A valid non existing course" />
+        <item itemvalue="Behat.courses_counter_get.feature::With one course" />
+        <item itemvalue="Behat.courses_counter_get.feature::With more than one course having duplicates" />
+        <item itemvalue="PHPUnit.CreateCourseCommandHandlerTest" />
+        <item itemvalue="HTTP Request.hi | #1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -268,6 +352,17 @@
       <workItem from="1649594682769" duration="324000" />
       <workItem from="1649595230884" duration="69000" />
       <workItem from="1649607356407" duration="272000" />
+      <workItem from="1649928503520" duration="2422000" />
+      <workItem from="1649934906549" duration="2648000" />
+      <workItem from="1649938123024" duration="1338000" />
+      <workItem from="1649940698118" duration="4511000" />
+      <workItem from="1649951985422" duration="1177000" />
+      <workItem from="1649966845599" duration="2925000" />
+      <workItem from="1650007638020" duration="2478000" />
+      <workItem from="1650011042679" duration="1739000" />
+      <workItem from="1650013357663" duration="50000" />
+      <workItem from="1650040203608" duration="110000" />
+      <workItem from="1650112559019" duration="229000" />
     </task>
     <task id="LOCAL-00001" summary="fix cannot find file _____ locally&#10;    to fix it set server name by environment variable PHP_IDE_CONFIG - thus turn on &quot;force break at first line when no path mapping specified&quot;  or &quot;&quot;">
       <created>1647206397158</created>
@@ -348,9 +443,28 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Shared/Domain/ValueObject/Uuid.php</url>
-          <line>40</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/apps/mooc/backend/src/Controller/Courses/CoursesPutController.php</url>
+          <line>15</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Mooc/Courses/Application/Create/CreateCourseCommand.php</url>
+          <line>16</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/vendor/friends-of-behat/symfony-extension/src/ServiceContainer/SymfonyExtension.php</url>
+          <line>181</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/tests/Shared/Infrastructure/Bus/Event/RabbitMq/RabbitMqEventBusTest.php</url>
+          <line>57</line>
+          <properties>
+            <option name="className" value="\CodelyTv\Tests\Shared\Infrastructure\Bus\Event\RabbitMq\RabbitMqEventBusTest" />
+            <option name="methodName" value="it_should_publish_and_consume_domain_events_from_rabbitmq" />
+          </properties>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
