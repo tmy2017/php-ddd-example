@@ -1,0 +1,24 @@
+# for phpstorm bookmark on gitpod - to be appended in the .bashrc by gitpod workspace custom images like tmy2017/gitpod-pstorm-with-php71-mysql8
+# ONLY 1 TIME - after start, sync back to phpstorm 
+# if Ref: https://linuxize.com/post/bash-if-else-statement/ 
+if [ ! -e /var/run/tmy-phpstorm-bookmark-sync.pid ]
+then
+	# watch out do not have double tabs! it will break terminal - seems to trigger auto complete - strange
+    sudo touch /var/run/tmy-phpstorm-bookmark-sync.pid 2>/dev/null;
+	rm -rf /home/gitpod/.config/JetBrains/PhpStorm2021.3/workspace/;
+	cp -rf ${GITPOD_REPO_ROOT}/.gitpod/phpstormConfigWorkspaceForBookmarks /home/gitpod/.config/JetBrains/PhpStorm2021.3/workspace/ 2>/dev/null;
+fi
+# sync TO preserve 
+# Ref: https://linuxize.com/post/bash-while-loop/#infinite-while-loop
+#	"single line equivalent" while :; do echo 'Press <CTRL+C> to exit.'; sleep 1; done
+#	MUST have space AFTER colon! 
+#	zzSEMICOLON zzseems :in zzterminal or in zzshell-zzscript - bash all zzexpect zzENTER/zzNEWLINE - so if you need to hv zzmultiple zzcommand in zzSAME zzline - then MUST have semicolon - but normally - especially those zzcontrol zzflow like zzwhile or zzif - really zzNOT zzNeeded! zzNittyGritty-zzDetails-zzCareful zz-_16-_y22-0423-2213
+while : 
+do
+	# cp is NOT idempotent! thus to remove first, Ref: https://unix.stackexchange.com/questions/228597/how-to-copy-a-folder-recursively-in-an-idempotent-way-using-cp 
+	rm -rf ${GITPOD_REPO_ROOT}/.gitpod/phpstormConfigWorkspaceForBookmarks/;
+	# if folder not exist, still silence it Ref: https://stackoverflow.com/questions/25337405/how-to-make-cp-command-quiet-when-no-file-is-found-in-bash zz-_16-_y22-0423-2145
+	cp -rf /home/gitpod/.config/JetBrains/PhpStorm2021.3/workspace ${GITPOD_REPO_ROOT}/.gitpod/phpstormConfigWorkspaceForBookmarks/ 2>/dev/null;
+	sleep 1;
+# if last line and want to do background - must not have semi colon 
+done &
