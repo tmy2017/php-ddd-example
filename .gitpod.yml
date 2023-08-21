@@ -1,5 +1,5 @@
 # change back to workspace-full so that jetbrains gateway works
-image: workspace-full
+image: gitpod/workspace-full
 
 tasks:
   # USAGE NOTE on PHPSTORMS in gitpod: 
