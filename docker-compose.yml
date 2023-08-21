@@ -68,7 +68,7 @@ services:
       - shared_rabbitmq
       - shared_prometheus
       - backoffice_elasticsearch
-    command: symfony serve --dir=apps/backoffice/backend/public --port=8040 --force-php-discovery
+    command: symfony serve --dir=apps/backoffice/backend/public --port=8040 
 
   backoffice_frontend_php:
     container_name: codelytv-php_ddd_skeleton-backoffice_frontend-php
@@ -87,7 +87,7 @@ services:
       - shared_prometheus
       - backoffice_elasticsearch
       - mooc_mysql
-    command: symfony serve --dir=apps/backoffice/frontend/public --port=8041 --force-php-discovery
+    command: symfony serve --dir=apps/backoffice/frontend/public --port=8041 
 
   mooc_backend_php:
     # Ref: https://yellow-zebra-8ptb272d.ws-eu21.gitpod.io/ & https://github.com/rfay/gitpod-host-docker-internal zz-_48-_y21-1203-2232
@@ -106,4 +106,4 @@ services:
       - shared_rabbitmq
       - shared_prometheus
       - mooc_mysql
-    command: symfony serve --dir=apps/mooc/backend/public --port=8030 --force-php-discovery
+    command: symfony serve --dir=apps/mooc/backend/public --port=8030 
